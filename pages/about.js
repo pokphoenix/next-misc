@@ -1,7 +1,16 @@
+import Head from 'next/head'
 import Footer from '../components/Footer'
 
 const About = () => {
-    return ( <h1 className='content'>About</h1>  );
+    return ( 
+    <>
+    <Head>
+        <title>About Codevolution</title>
+        <meta name='description' content='Free tutorial' />
+    </Head>
+    <h1 className='content'>About</h1>  
+    </>
+    );
 }
  
 export default About;
