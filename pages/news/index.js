@@ -6,10 +6,13 @@ const News = ({data}) => {
  
 export default News;
 
-export async function getStaticProps(){
+export async function getStaticProps(context){
+    console.log('getStaticProps ', context.previewData) //getStaticProps  { user: 'Pok phoenix' }
     return {
         props: {
-            data: 'List of published articles',
+            data:  context.preview 
+            ? 'List of draft articles' 
+            : 'List of published articles',
         }
     }
 }
